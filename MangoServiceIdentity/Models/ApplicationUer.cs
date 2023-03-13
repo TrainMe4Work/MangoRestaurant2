@@ -8,5 +8,6 @@ namespace MangoServiceIdentity.Models
 {
     public class ApplicationUser :  IdentityUser
     {
+        
     }
 }

@@ -9,8 +9,8 @@ namespace MangoServiceIdentity
 {
     public static class SD
     {
-        public const string admin = "admin";
-        public const string customer = "customer";
+        public const string Admin = "Admin";
+        public const string Customer = "Customer";
         public static IEnumerable<IdentityResource> IdentityResources =>
             new List<IdentityResource>
             {
@@ -22,9 +22,9 @@ namespace MangoServiceIdentity
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope> {
                 new ApiScope("Mango", "Mango Server"),
-                new ApiScope(name: "Read", displayName : "Read your Data"),
-                new ApiScope(name : "Write", displayName: "Write your Data"),
-                new ApiScope(name : "Delete", displayName: "Delete your Data")
+                new ApiScope(name: "read", displayName : "Read your Data"),
+                new ApiScope(name : "write", displayName: "Write your Data"),
+                new ApiScope(name : "elete", displayName: "Delete your Data")
             };
 
         public static IEnumerable<Client> Clients =>
@@ -42,14 +42,13 @@ namespace MangoServiceIdentity
                     ClientId="mango",
                     ClientSecrets= { new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.Code,
-                    RedirectUris={ "https://localhost:44378/signin-oidc" },
-                    PostLogoutRedirectUris={"https://localhost:44378/signout-callback-oidc" },
+                    RedirectUris={ "https://localhost:44374/signin-oidc" },
+                    PostLogoutRedirectUris={"https://localhost:44374/signout-callback-oidc" },
                     AllowedScopes=new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.Email,
-                        "mango"
+                        IdentityServerConstants.StandardScopes.Email,  "mango"
                     }
                 },
             };
