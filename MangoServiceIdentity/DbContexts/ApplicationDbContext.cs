@@ -12,7 +12,7 @@ namespace MangoServiceIdentity.DbContexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            string className = "";
+           //
         }
     }
 }
