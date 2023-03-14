@@ -44,7 +44,6 @@ C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Microsoft.Ident
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
@@ -65,3 +64,4 @@ C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\runtimes\win-x8
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\TrainMe050622\MangoRestaurant2\MangoServices\obj\Debug\net5.0\MangoServices.csproj.AssemblyReference.cache
+C:\TrainMe050622\MangoRestaurant2\MangoServices\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
