@@ -10,19 +10,19 @@ using System.Threading.Tasks;
 
 namespace MangoServiceIdentity.Initializer
 {
-    public class DbIntitializer : IDbInitializer
+    public class DbInitializer : IDbInitializer
     {
         private readonly ApplicationDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly RoleManager<IdentityRole> _roleManger;
 
-        public DbIntitializer( ApplicationDbContext db, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManger)
+        public DbInitializer(ApplicationDbContext db, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
+            _roleManager = roleManager;
             _userManager = userManager;
-            _roleManager = roleManger;
         }
+
         public void Initialize()
         {
             if (_roleManager.FindByNameAsync(SD.Admin).Result == null)
@@ -45,14 +45,14 @@ namespace MangoServiceIdentity.Initializer
             _userManager.CreateAsync(adminUser, "Admin123*").GetAwaiter().GetResult();
             _userManager.AddToRoleAsync(adminUser, SD.Admin).GetAwaiter().GetResult();
 
-            var temp1 = _userManager.AddClaimsAsync(adminUser, new Claim[] {
+            var temp1 =_userManager.AddClaimsAsync(adminUser, new Claim[] {
                 new Claim(JwtClaimTypes.Name,adminUser.FirstName+" "+ adminUser.LastName),
                 new Claim(JwtClaimTypes.GivenName,adminUser.FirstName),
                 new Claim(JwtClaimTypes.FamilyName,adminUser.LastName),
                 new Claim(JwtClaimTypes.Role,SD.Admin),
             }).Result;
 
-            ApplicationUser customerUser = new ApplicationUser()
+            ApplicationUser customerUser = new()
             {
                 UserName = "customer1@gmail.com",
                 Email = "customer1@gmail.com",
